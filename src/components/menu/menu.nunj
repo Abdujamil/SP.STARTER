@@ -1,0 +1,24 @@
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro menu(active=false) %}
+	<nav class="menu">
+			{{ icon({
+				iconName: 'Logo',
+				className: 'logo'
+			}) }}
+		<div class="menu_item_icons">
+			{{ icon({
+				iconName: 'search',
+				className: 'search'
+			}) }}
+			{{ icon({
+				iconName: 'Cart',
+				className: 'cart'
+			}) }}
+			{{ icon({
+				iconName: 'Burger',
+				className: 'burger'
+			}) }}
+		</div>
+	</nav>
+{% endmacro %}

@@ -1,0 +1,19 @@
+<div class="total_body">
+	<div class="subtotal">
+		<p>Subtotal</p>
+		<p class="subtotal_price">$1 050</p>
+	</div>
+	<div class="tax">
+		<p>Tax</p>
+		<p class="tax_price">$100</p>
+	</div>
+	<div class="shipping">
+		<p>Shipping</p>
+		<p class="shipping_price">$150</p>
+	</div>
+	<div class="total_foot">
+		<p>Total</p>
+		<p class="total_price">$1 300</p>
+	</div>
+	</div>
+</div>

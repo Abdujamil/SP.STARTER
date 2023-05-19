@@ -1,0 +1,8 @@
+<div class="progress_bar"> 
+	<ol id="progress-bar">
+		<li class="step-done">Account</li>
+		<li class="step-done">Shipping</li>
+		<li class="step-active">Billing</li>
+		<li class="step-todo">Review</li>
+	</ol>
+</div>

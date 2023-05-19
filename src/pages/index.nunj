@@ -1,0 +1,36 @@
+{% extends "../templates/base.nunj" %}
+
+{% from "../components/button/button.nunj" import button %}
+{% from "../components/icon/icon.nunj" import icon %}
+
+{# Пример расширения существующего блока #}
+{# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
+{# {% block title %}Home / {{ super() }}{% endblock title %} #}
+
+
+{% block content %}
+
+	{% include '../includes/header/header.nunj' %}
+
+	<div class="container">
+
+		<div class="left_block" style="padding: 60px 0;">
+			{% include '../includes/progressBar/progressBar.nunj' %}
+			{% include '../includes/payment/payment.nunj' %}
+		</div>
+		<div class="right_block">
+			<div class="my_basket">
+				<div class="my_basket_cards">
+					<h1 class="basket_title">My basket</h1>
+					{% include '../includes/basket-card/card.nunj' %}
+				</div>
+			</div>
+			<div class="promo_code">
+				{% include '../includes/promo-code-block/promoCode.nunj' %}
+			</div>
+
+			<div class="total">
+				{% include '../includes/total/total.nunj' %}
+			</div>
+	</div>
+{% endblock %}

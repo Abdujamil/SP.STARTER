@@ -1,0 +1,42 @@
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.menu_item_icons {
+		display: flex;
+		align-items: center;
+		gap: 26px;
+
+		.search {
+			width: 24px;
+			height: 24px;
+			cursor: pointer;
+		}
+
+		.cart {
+			width: 30px;
+			height: 27px;
+			cursor: pointer;
+		}
+
+		.burger {
+			width: 30px;
+			height: 22px;
+			display: none;
+			cursor: pointer;
+		}
+		@media (max-width: 768px) {
+			.burger {
+				display: block !important;
+			}
+		}
+	}
+
+	.logo {
+		width: 89px;
+		height: 32px;
+		cursor: pointer;
+		cursor: pointer;
+	}
+}

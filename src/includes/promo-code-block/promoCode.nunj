@@ -1,0 +1,7 @@
+<div class="promo_code_body">
+	<h1 class="promo_code_title">Promo code</h1>
+	<div class="promo_code_inpt">
+		<input type="text" name="promo_code" id="" placeholder="Placeholder Text">
+		<button class="promo_code_btn">Apply</button>
+	</div>
+</div>

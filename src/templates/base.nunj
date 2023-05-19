@@ -1,0 +1,103 @@
+{% from "./_head-scripts.nunj" import headScripts %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}Project{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		{{ headScripts() }}
+
+
+		{% block stylesheets %}
+			<link rel="stylesheet" href="assets/css/styles.css?hash" />
+		{% endblock stylesheets %}
+	</head>
+	<body>
+
+		<div class="wrapper">
+			{% block content %}
+			{% endblock content %}
+		</div>
+
+		{% block scripts %}
+		<script src="assets/js/bundle.js?hash"></script>	
+			<script>
+				const burger = document.querySelector('.burger');
+				const rightBlock = document.querySelector('.right_block');
+
+				burger.addEventListener('click', () => {
+
+					if (rightBlock.style.display === "block") {
+						rightBlock.style.display = "none";
+
+					} else {
+						rightBlock.style.display = "block";
+					}
+				});
+
+		
+				function handleRemove(event) {
+				const card = event.target.closest('.basket_card');
+
+					if (card) {
+						card.remove();
+						updateTotal();
+					}
+				}
+
+
+			
+				const productCards = document.querySelectorAll('.basket_card');
+				const totalElement = document.querySelector('.total_price');
+				const subTotalElement = document.querySelector('.subtotal_price');
+			
+				productCards.forEach(card => {
+				const decreaseBtn = card.querySelector('.minus');
+				const increaseBtn = card.querySelector('.plus');
+				const quantityInput = card.querySelector('.quantity_input');
+				const price = 525; // Цена товара
+
+				decreaseBtn.addEventListener('click', () => {
+	
+					if (parseInt(quantityInput.value) > 1) {
+					quantityInput.value = parseInt(quantityInput.value) - 1;
+					calculateTotal();
+					}
+				});
+
+				increaseBtn.addEventListener('click', () => {
+			
+					if (parseInt(quantityInput.value) < 10) {
+					quantityInput.value = parseInt(quantityInput.value) + 1;
+					calculateTotal();
+					}
+				});
+
+				quantityInput.addEventListener('change', () => {
+					calculateTotal();
+				});
+
+				function calculateTotal(){
+					const subtotal_price = parseInt(subTotalElement.value);
+					const tax = 100;
+					const shipping = 150;
+					const quantity = parseInt(quantityInput.value);
+					const subTotalPrice = quantity * price;
+					const totalPrice = subTotalPrice + tax + shipping;
+		
+					subTotalElement.textContent = `$${subTotalPrice}`;
+					totalElement.textContent = `$${totalPrice}`;
+				}
+				});
+
+
+				const removeButtons = document.querySelectorAll('.close');
+				removeButtons.forEach((button) => {
+				button.addEventListener('click', handleRemove);
+				});
+
+			</script>
+		{% endblock scripts %}
+	</body>
+</html>
