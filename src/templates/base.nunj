@@ -36,14 +36,21 @@
 						}
 					});
 
+					const closeIcons = document.querySelectorAll('.close');
+
+					closeIcons.forEach(icon => {
+						icon.addEventListener('click', handleRemove);
+					});
+
 					function handleRemove(event) {
+
 						const card = event
 							.target
 							.closest('.basket_card');
 
 						if (card) {
+
 							card.remove();
-							updateTotal();
 						}
 					}
 
@@ -55,7 +62,7 @@
 						const decreaseBtn = card.querySelector('.minus');
 						const increaseBtn = card.querySelector('.plus');
 						const quantityInput = card.querySelector('.quantity_input');
-						const price = 525; // Цена товара
+						const price = 525;
 
 						decreaseBtn.addEventListener('click', () => {
 

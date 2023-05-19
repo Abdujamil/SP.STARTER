@@ -45,7 +45,7 @@
 			<p class="quantity"><input class="quantity_input" type="number" min="1" max="10" value="1"></p>
 			{{ icon({
 				iconName: 'basket_plus_icon',
-				className: 'minus'
+				className: 'plus'
 			}) }}
 			<p class="price">$ 525</p>
 		</div>
