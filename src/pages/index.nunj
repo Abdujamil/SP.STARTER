@@ -7,7 +7,6 @@
 {# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
 {# {% block title %}Home / {{ super() }}{% endblock title %} #}
 
-
 {% block content %}
 
 	{% include '../includes/header/header.nunj' %}
@@ -32,5 +31,7 @@
 			<div class="total">
 				{% include '../includes/total/total.nunj' %}
 			</div>
+		</div>
 	</div>
+
 {% endblock %}

@@ -1,58 +1,59 @@
 <div class="payment">
-				<h1 style="margin-bottom: 42px;">Billing Information</h1>
-				<div class="payments_choice_card">
-					<div class="payment_radio_card">
-						<input type="radio">
-						<p>Pay with Credit Card</p>
-					</div>
-					<div class="payment_radio_card">
-						<input type="radio">
-						{{ icon({
-							iconName: 'PayPal',
-							className: 'paypal',
-							attributes: ' style="width="85"; height="23";" viewBox="0 0 85 23" fill="none" '
-						}) }}
-					</div>
-				</div>
-				<div class="form">
-					<div class="form__name_card">
-						<div class="form__name_card">
-							<label for="nCard">Name on card</label>
-							<input type="text">
-						</div>
-					</div>
-					<div class="form_card_number">
-						<label for="nCard">Card number</label>
-						<div class="card_numbers">
-							<input class="card_number" type="text" />
-							<input class="card_number" type="text" />
-							<input class="card_number" type="text" />
-							<input class="card_number" type="text" />
-						</div>
-					</div>
-					<div class="form_card_pass">
-						<div class="card_expire_date">
-							<label for="cExDate">Expire date</label>
-							<input type="text">
-						</div>
-						<div class="card_cvv_code">
-							<label for="cvvCode">CVV code</label>
-							<input type="text">
-						</div>
-					</div>
-				</div>
-				<div class="payment_foot">
-					<div class="save_credit_card">
-						<input type="checkbox">
-						<p>Save information of this credit card</p>
-					</div>
-					<div class="accept_terms">
-						<input type="checkbox">
-						<p>I accept the <span>terms and comditions</span> and the <span>Privacy Policies</span></p>
-					</div>
-				</div>
-				<div class="payment_foot_btns">
-					<button class="back">Back</button>
-					<button class="chekout">Check Out</button>
-				</div>
+	<h1 style="margin-bottom: 42px;">Billing Information</h1>
+	<div class="payments_choice_card">
+		<div class="payment_radio_card">
+			<input type="radio">
+			<p>Pay with Credit Card</p>
+		</div>
+		<div class="payment_radio_card">
+			<input type="radio">
+			{{ icon({
+				iconName: 'PayPal',
+				className: 'paypal',
+				attributes: ' style="width="85"; height="23";" viewBox="0 0 85 23" fill="none" '
+				}) }}
+		</div>
+	</div>
+
+	<div class="form">
+		<div class="form__name_card">
+			<div class="form__name_card">
+				<label for="nCard">Name on card</label>
+				<input type="text">
 			</div>
+		</div>
+		<div class="form_card_number">
+			<label for="nCard">Card number</label>
+			<div class="card_numbers">
+				<input class="card_number" type="text"/>
+				<input class="card_number" type="text"/>
+				<input class="card_number" type="text"/>
+				<input class="card_number" type="text"/>
+			</div>
+		</div>
+		<div class="form_card_pass">
+			<div class="card_expire_date">
+				<label for="cExDate">Expire date</label>
+				<input type="text">
+			</div>
+			<div class="card_cvv_code">
+				<label for="cvvCode">CVV code</label>
+				<input type="text">
+			</div>
+		</div>
+	</div>
+	<div class="payment_foot">
+		<div class="save_credit_card">
+			<input type="checkbox">
+			<p>Save information of this credit card</p>
+		</div>
+		<div class="accept_terms">
+			<input type="checkbox">
+			<p>I accept the <span>terms and comditions</span> and the <span>Privacy Policies</span></p>
+		</div>
+	</div>
+	<div class="payment_foot_btns">
+		<button class="back">Back</button>
+		<button class="chekout">Check Out</button>
+	</div>
+</div>

@@ -1,49 +1,49 @@
 <div class="basket_card">
-        <svg class="basket">
-            <use xlink:href="#icon-basket_img1" />
-        </svg>
-		{{ icon({
+	<svg class="basket">
+		<use xlink:href="#icon-basket_img1"/>
+	</svg>
+	{{ icon({
 			iconName: 'close',
 			className: 'close'
 		}) }}
-		<div class="card_body">
-			<div class="card_desc">{{ card[0].card_desc }}</div>
-			<div class="card_foot">
-				<svg class="minus">
-					<use xlink:href="#icon-basket_minus_icon" />
-				</svg>
+	<div class="card_body">
+		<div class="card_desc">{{ card[0].card_desc }}</div>
+		<div class="card_foot">
+			<svg class="minus">
+				<use xlink:href="#icon-basket_minus_icon"/>
+			</svg>
 
-				<p class="quantity"><input class="quantity_input" type="number" min="1" max="10" value="1"></p>
-				<svg class="plus">
-					<use xlink:href="#icon-basket_plus_icon" />
-				</svg>
+			<p class="quantity"><input class="quantity_input" type="number" min="1" max="10" value="1"></p>
+			<svg class="plus">
+				<use xlink:href="#icon-basket_plus_icon"/>
+			</svg>
 
-				<p class="price">$ 525</p>
-			</div>
+			<p class="price">$ 525</p>
 		</div>
+	</div>
 </div>
 
 <div class="basket_card">
-    {{ icon({
+	{{ icon({
         iconName: 'close',
         className: 'close'
     }) }}
-    {{ icon({
+	{{ icon({
         iconName: 'basket_img2',
         className: 'basket'
     }) }}
-    <div class="card_body">
-	<div class="card_desc_2">{{ card[1].card_desc }}</div>
-	<div class="card_foot">
-		<svg class="minus">
-			<use xlink:href="#icon-basket_minus_icon" />
-		</svg>
+	<div class="card_body">
+		<div class="card_desc_2">{{ card[1].card_desc }}</div>
+		<div class="card_foot">
+			<svg class="minus">
+				<use xlink:href="#icon-basket_minus_icon"/>
+			</svg>
 
-		<p class="quantity"><input class="quantity_input" type="number" min="1" max="10" value="1"></p>
-		<svg class="plus">
-			<use xlink:href="#icon-basket_plus_icon" />
-		</svg>
-		    <p class="price">$ 525</p>
+			<p class="quantity"><input class="quantity_input" type="number" min="1" max="10" value="1"></p>
+			<svg class="plus">
+				<use xlink:href="#icon-basket_plus_icon"/>
+			</svg>
+			<p class="price">$ 525</p>
 		</div>
 	</div>
 </div>
