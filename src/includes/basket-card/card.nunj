@@ -14,7 +14,7 @@
 				iconName: 'basket_minus_icon',
 				className: 'minus'
 			}) }}
-			<p class="quantity"><input class="quantity_input" type="number" min="1" max="10" value="1"></p>
+			<p class="quantity"><input class="quantity_input" type="number" min="0" max="10" value="1"></p>
 			{{ icon({
 				iconName: 'basket_plus_icon',
 				className: 'plus'
@@ -42,7 +42,7 @@
 				className: 'minus'
 			}) }}
 
-			<p class="quantity"><input class="quantity_input" type="number" min="1" max="10" value="1"></p>
+			<p class="quantity"><input class="quantity_input" type="number" min="0" max="10" value="1"></p>
 			{{ icon({
 				iconName: 'basket_plus_icon',
 				className: 'plus'

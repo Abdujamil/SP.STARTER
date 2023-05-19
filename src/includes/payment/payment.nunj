@@ -2,11 +2,11 @@
 	<h1 style="margin-bottom: 42px;">Billing Information</h1>
 	<div class="payments_choice_card">
 		<div class="payment_radio_card">
-			<input type="radio">
+			<input name="option" type="radio">
 			<p>Pay with Credit Card</p>
 		</div>
 		<div class="payment_radio_card">
-			<input type="radio">
+			<input name="option" type="radio">
 			{{ icon({ iconName: 'PayPal', className: 'paypal'}) }}
 		</div>
 	</div>
@@ -40,12 +40,20 @@
 	</div>
 	<div class="payment_foot">
 		<div class="save_credit_card">
-			<input type="checkbox">
-			<p>Save information of this credit card</p>
+			<p>
+				<label>
+					<input type="checkbox">
+					Save information of this credit card
+				</label>
+			</p>
 		</div>
 		<div class="accept_terms">
-			<input type="checkbox">
-			<p>I accept the <span>terms and comditions</span> and the <span>Privacy Policies</span></p>
+			<p>
+				<label>
+					<input type="checkbox">
+					I accept the terms and comditions and the Privacy Policies
+				</label>
+			</p>
 		</div>
 	</div>
 	<div class="payment_foot_btns">

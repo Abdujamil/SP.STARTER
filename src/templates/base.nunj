@@ -36,27 +36,10 @@
 						}
 					});
 
-					const closeIcons = document.querySelectorAll('.close');
-
-					closeIcons.forEach(icon => {
-						icon.addEventListener('click', handleRemove);
-					});
-
-					function handleRemove(event) {
-
-						const card = event
-							.target
-							.closest('.basket_card');
-
-						if (card) {
-
-							card.remove();
-						}
-					}
-
 					const productCards = document.querySelectorAll('.basket_card');
 					const totalElement = document.querySelector('.total_price');
 					const subTotalElement = document.querySelector('.subtotal_price');
+					const closeIcons = document.querySelectorAll('.close');
 
 					productCards.forEach(card => {
 						const decreaseBtn = card.querySelector('.minus');
@@ -84,6 +67,38 @@
 							calculateTotal();
 						});
 
+						closeIcons.forEach(icon => {
+							icon.addEventListener('click', handleRemove);
+						});
+
+						function handleRemove(event) {
+
+							const card = event
+								.target
+								.closest('.basket_card');
+
+							if (card) {
+
+								card.remove();
+
+								{# updateTotal(productCards.length)  #}
+							}
+
+							{# if (productCards.length === 0) {
+								updateTotal(0);
+							}else{
+								updateTotal(calculateTotal());
+							} #}
+						}
+
+						{# const total = productCards.length > 0
+							? calculateTotal()
+							: 0; #}
+
+						{# function updateTotal() {
+							totalElement.textContent = total;
+						} #}
+
 						function calculateTotal() {
 							const subtotal_price = parseInt(subTotalElement.value);
 							const tax = 100;
@@ -95,11 +110,6 @@
 							subTotalElement.textContent = `$${subTotalPrice}`;
 							totalElement.textContent = `$${totalPrice}`;
 						}
-					});
-
-					const removeButtons = document.querySelectorAll('.close');
-					removeButtons.forEach((button) => {
-						button.addEventListener('click', handleRemove);
 					});
 				</script>
 			{% endblock scripts %}
