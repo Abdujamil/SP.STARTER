@@ -23,7 +23,7 @@
 			{% block scripts %}
 				<script src="assets/js/bundle.js?hash"></script>
 				<script>
-					var burger = document.querySelector('.burger');
+					var cart = document.querySelector('.cart');
 					var rightBlock = document.querySelector('.right_block');
 
 					var productCards = document.querySelectorAll('.basket_card');
@@ -31,7 +31,7 @@
 					var subTotalElement = document.querySelector('.subtotal_price');
 					var closeIcons = document.querySelectorAll('.close');
 
-					burger.addEventListener('click', function () {
+					cart.addEventListener('click', function () {
 						if (rightBlock.style.display === "block") {
 							rightBlock.style.display = "none";
 						} else {

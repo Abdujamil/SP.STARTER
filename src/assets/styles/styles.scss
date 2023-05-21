@@ -44,7 +44,7 @@ $mobile: 320px;
 
 		.left_block {
 			max-width: 1230px;
-			border-right: 1px solid #cfcfcf;
+			// border-right: 1px solid #cfcfcf;
 
 			.progress_bar {
 				margin-bottom: 60px;
@@ -335,6 +335,7 @@ $mobile: 320px;
 							line-height: 22px;
 							background: #ffffff;
 							color: #8c8c8c;
+							cursor: pointer;
 
 							span {
 								color: #000000;
@@ -391,6 +392,8 @@ $mobile: 320px;
 		}
 
 		.right_block {
+			border-left: 1px solid #cfcfcf;
+
 			.my_basket {
 				border-bottom: 1px solid #cfcfcf;
 

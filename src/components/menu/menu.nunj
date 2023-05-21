@@ -1,16 +1,21 @@
 {% from "../icon/icon.nunj" import icon %}
 
-{% macro menu(active=false) %}
+{% macro menu(active = false) %}
 	<nav class="menu">
-			{{ icon({
+		{{ icon({
 				iconName: 'Logo',
 				className: 'logo'
 			}) }}
 		<div class="menu_item_icons">
-			{{ icon({
-				iconName: 'search',
-				className: 'search'
-			}) }}
+			<div class="search-box">
+				<button class="btn-search">
+				{{ icon({
+					iconName: 'search',
+					className: 'search'
+				}) }}
+				</button>
+				<input type="text" class="input-search" placeholder="Type to Search...">
+			</div>
 			{{ icon({
 				iconName: 'Cart',
 				className: 'cart'
