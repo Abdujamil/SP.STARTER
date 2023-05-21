@@ -7,12 +7,12 @@
     "url": "https://github.com/sborkaproject/SP.Starter"
   },
   "scripts": {
-    "start": "gulp",
-    "build": "cross-env NODE_ENV=production gulp production",
-    "zip": "cross-env NODE_ENV=production gulp zip",
-    "prettier": "prettier ./src/**/*.{scss,js} --write",
-    "eslint": "eslint ./src/assets/js/**/*.js --fix",
-    "lint": "npm run prettier && npm run eslint"
+    "start": "gulp --openssl-legacy-provider",
+    "build": "cross-env NODE_ENV=production gulp production --openssl-legacy-provider",
+    "zip": "cross-env NODE_ENV=production gulp zip --openssl-legacy-provider",
+    "prettier": "prettier ./src/**/*.{scss,js} --write --openssl-legacy-provider",
+    "eslint": "eslint ./src/assets/js/**/*.js --fix --openssl-legacy-provider",
+    "lint": "npm run prettier && npm run eslint --openssl-legacy-provider"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
