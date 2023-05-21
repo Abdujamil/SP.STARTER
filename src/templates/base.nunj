@@ -23,92 +23,64 @@
 			{% block scripts %}
 				<script src="assets/js/bundle.js?hash"></script>
 				<script>
-					const burger = document.querySelector('.burger');
-					const rightBlock = document.querySelector('.right_block');
+					var burger = document.querySelector('.burger');
+					var rightBlock = document.querySelector('.right_block');
 
-					burger.addEventListener('click', () => {
+					var productCards = document.querySelectorAll('.basket_card');
+					var totalElement = document.querySelector('.total_price');
+					var subTotalElement = document.querySelector('.subtotal_price');
+					var closeIcons = document.querySelectorAll('.close');
 
+					burger.addEventListener('click', function () {
 						if (rightBlock.style.display === "block") {
 							rightBlock.style.display = "none";
-
 						} else {
 							rightBlock.style.display = "block";
 						}
 					});
 
-					const productCards = document.querySelectorAll('.basket_card');
-					const totalElement = document.querySelector('.total_price');
-					const subTotalElement = document.querySelector('.subtotal_price');
-					const closeIcons = document.querySelectorAll('.close');
-
-					productCards.forEach(card => {
-						const decreaseBtn = card.querySelector('.minus');
-						const increaseBtn = card.querySelector('.plus');
-						const quantityInput = card.querySelector('.quantity_input');
-						const price = 525;
-
-						decreaseBtn.addEventListener('click', () => {
-
+					productCards.forEach(function (card) {
+						var decreaseBtn = card.querySelector('.minus');
+						var increaseBtn = card.querySelector('.plus');
+						var quantityInput = card.querySelector('.quantity_input');
+						var price = 525;
+						decreaseBtn.addEventListener('click', function () {
 							if (parseInt(quantityInput.value) > 1) {
 								quantityInput.value = parseInt(quantityInput.value) - 1;
 								calculateTotal();
 							}
 						});
-
-						increaseBtn.addEventListener('click', () => {
-
+						increaseBtn.addEventListener('click', function () {
 							if (parseInt(quantityInput.value) < 10) {
 								quantityInput.value = parseInt(quantityInput.value) + 1;
 								calculateTotal();
 							}
 						});
-
-						quantityInput.addEventListener('change', () => {
+						quantityInput.addEventListener('change', function () {
 							calculateTotal();
 						});
-
-						closeIcons.forEach(icon => {
+						closeIcons.forEach(function (icon) {
 							icon.addEventListener('click', handleRemove);
 						});
 
 						function handleRemove(event) {
-
-							const card = event
+							var card = event
 								.target
 								.closest('.basket_card');
-
 							if (card) {
-
 								card.remove();
-
-								{# updateTotal(productCards.length)  #}
 							}
-
-							{# if (productCards.length === 0) {
-								updateTotal(0);
-							}else{
-								updateTotal(calculateTotal());
-							} #}
 						}
 
-						{# const total = productCards.length > 0
-							? calculateTotal()
-							: 0; #}
-
-						{# function updateTotal() {
-							totalElement.textContent = total;
-						} #}
-
 						function calculateTotal() {
-							const subtotal_price = parseInt(subTotalElement.value);
-							const tax = 100;
-							const shipping = 150;
-							const quantity = parseInt(quantityInput.value);
-							const subTotalPrice = quantity * price;
-							const totalPrice = subTotalPrice + tax + shipping;
-
-							subTotalElement.textContent = `$${subTotalPrice}`;
-							totalElement.textContent = `$${totalPrice}`;
+							var subtotal_price = parseInt(subTotalElement.value);
+							var tax = 100;
+							var shipping = 150;
+							var quantity = parseInt(quantityInput.value);
+							var subTotalPrice = quantity * price;
+							var totalPrice = subTotalPrice + tax + shipping;
+							subTotalElement.textContent = "$".concat(subTotalPrice);
+							totalElement.textContent = "$".concat(totalPrice);
 						}
 					});
 				</script>
