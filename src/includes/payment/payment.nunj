@@ -21,20 +21,20 @@
 		<div class="form_card_number">
 			<label for="nCard">Card number</label>
 			<div class="card_numbers">
-				<input class="card_number" type="text"/>
-				<input class="card_number" type="text"/>
-				<input class="card_number" type="text"/>
-				<input class="card_number" type="text"/>
+				<input class="card_number" type="number"/>
+				<input class="card_number" type="number"/>
+				<input class="card_number" type="number"/>
+				<input class="card_number" type="number"/>
 			</div>
 		</div>
 		<div class="form_card_pass">
 			<div class="card_expire_date">
 				<label for="cExDate">Expire date</label>
-				<input type="text">
+				<input type="number">
 			</div>
 			<div class="card_cvv_code">
 				<label for="cvvCode">CVV code</label>
-				<input type="text">
+				<input type="password">
 			</div>
 		</div>
 	</div>
